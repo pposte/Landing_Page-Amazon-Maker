@@ -1,0 +1,186 @@
+
+.Viewport {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	overflow: hidden;
+	background-color: white;
+}
+.BackgroundImage{
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	overflow: hidden;
+	display: block;
+}
+.Portrait #Portrait_BackgroundImage{
+	background-size: 800px 1280px !important;
+}
+
+.Landscape #Landscape_BackgroundImage{
+	background-size: 1280px 800px !important;
+}
+
+@media (orientation: landscape) {
+
+	.Landscape._sm #Landscape_BackgroundImage {
+		background: url(../images/sm_83651_Carosel_l_background.jpg);
+	}
+	.Landscape._md #Landscape_BackgroundImage {
+		background: url(../images/md_83651_Carosel_l_background.jpg);
+	}
+	.Landscape._lg #Landscape_BackgroundImage {
+		background: url(../images/lg_83651_Carosel_l_background.jpg);
+	}
+	.Landscape._xl #Landscape_BackgroundImage {
+		background: url(../images/xl_83651_Carosel_l_background.jpg);
+	}
+
+
+	.Ford #Landscape_BackgroundImage {background-size: 1439px 728px !important; background-position-y: 0px;}
+	.Ford #Landscape_BackgroundImage {overflow: hidden;}
+	.Ford .box {margin-left: 160px;}
+	.Tate .box{margin-left :45px;}
+	.Jem .box{margin-left :53px;}
+	.Soho .box{margin-left :45px;}
+	.Thor .box{margin-left :45px;}
+	.Apollo .box{margin-left :53px;}
+	.Ariel .box{margin-left:53px}
+}
+
+@media (orientation: portrait) {
+
+	.Portrait._sm #Portrait_BackgroundImage {
+		background: url(../images/sm_83651_Carosel_p_background.jpg);
+	}
+	.Portrait._md #Portrait_BackgroundImage {
+		background: url(../images/md_83651_Carosel_p_background.jpg);
+	}
+	.Portrait._lg #Portrait_BackgroundImage {
+		background: url(../images/lg_83651_Carosel_p_background.jpg);
+	}
+	.Portrait._xl #Portrait_BackgroundImage {
+		background: url(../images/xl_83651_Carosel_p_background.jpg);
+	}
+	/* FORD*/
+	.Ford #Portrait_BackgroundImage {background-size: cover !important;}
+	.Ford #Portrait_BackgroundImage {overflow: hidden;}
+}
+
+.logo{
+	background-size: 300px 90px !important;
+	position: relative;
+	height: 90px;
+	margin: auto;
+	margin-top: 160px;
+	text-align: center;
+	width: 300px;
+
+}
+
+._sm .logo{
+	background-image: url("../images/sm_Logo_Maker.png");
+}
+._md .logo{
+	background-image: url("../images/md_Logo_Maker.png");
+}
+._lg .logo{
+	background-image: url("../images/lg_Logo_Maker.png");
+}
+._xl .logo{
+	background-image: url("../images/xl_Logo_Maker.png");
+}
+
+.box{
+	margin: 50px;
+	margin-left: 85px;
+	width: 1110px;
+	display: inline-block;
+}
+.tile{
+	position: relative;
+	display: inline-block;
+	width: 273px;
+	height: 335px;
+	background-color: inherit;
+}
+.tile:active {
+	transform:rotateZ(5deg);
+	-webkit-transform:rotateZ(5deg);     
+}
+.inner{
+	background-size: 277px 365px !important;
+	width: 277px;
+	height: 365px;
+	background-color: inherit;
+}
+
+._sm #detail{
+	background-image: url("../images/sm_Tile_1_SmartStream.png");
+}
+._md #detail{
+	background-image: url("../images/md_Tile_1_SmartStream.png");
+}
+._lg #detail{
+	background-image: url("../images/lg_Tile_1_SmartStream.png");
+}
+._xl #detail{
+	background-image: url("../images/xl_Tile_1_SmartStream.png");
+}
+
+._sm #landing{
+	background-image: url("../images/sm_Tile_2_MAKER.png");
+}
+._md #landing{
+	background-image: url("../images/md_Tile_2_MAKER.png");
+}
+._lg #landing{
+	background-image: url("../images/lg_Tile_2_MAKER.png");
+}
+._xl #landing{
+	background-image: url("../images/xl_Tile_2_MAKER.png");
+}
+
+._sm #video{
+	background-image: url("../images/sm_Tile_3_Video.png");
+}
+._md #video{
+	background-image: url("../images/md_Tile_3_Video.png");
+}
+._lg #video{
+	background-image: url("../images/lg_Tile_3_Video.png");
+}
+._xl #video{
+	background-image: url("../images/xl_Tile_3_Video.png");
+}
+
+._sm #app{
+	background-image: url("../images/sm_Tile 4_App.png");
+}
+._md #app{
+	background-image: url("../images/md_Tile 4_App.png");
+}
+._lg #app{
+	background-image: url("../images/lg_Tile 4_App.png");
+}
+._xl #app{
+	background-image: url("../images/xl_Tile 4_App.png");
+}
+@media (orientation: portrait) {
+	.logo{
+		margin-top: 200px;
+	}
+	.box{
+		margin-left: 120px;
+		width:560px;
+	}
+	.tile{
+		height: 340px;
+	}
+}

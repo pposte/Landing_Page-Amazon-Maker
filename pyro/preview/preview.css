@@ -1,0 +1,26 @@
+*
+{
+	cursor: none;
+}
+
+/* ZOOM */
+
+.Zoom_50
+{
+	zoom: 50%;
+}
+
+.Zoom_75
+{
+	zoom: 75%;
+}
+
+.Zoom_100
+{
+
+}
+
+.Zoom_200
+{
+	zoom: 200%;
+}

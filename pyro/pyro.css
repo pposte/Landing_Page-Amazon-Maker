@@ -1,0 +1,130 @@
+html {
+
+	position: absolute;
+
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+
+	padding: 0px;
+	margin: 0px auto;
+
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-touch-callout: none;
+
+	-webkit-user-select: none;
+	user-select: none;
+
+	-webkit-font-smoothing: antialiased;
+	-webkit-font-smoothing: subpixel-antialiased;
+	-webkit-text-size-adjust: 100%;
+
+	background-color: #000000;
+
+	font-family: Helvetica;
+	font-size: 16px;
+	line-height: 150%;
+	color: #FFFFFF;
+
+	overflow: hidden;
+
+}
+
+body {
+
+	position: absolute;
+
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+
+	padding: 0px;
+	margin: 0px auto;
+
+	background-color: #000000;
+
+	font-family: Helvetica;
+
+	overflow: hidden;
+
+}
+
+body ::-webkit-scrollbar,
+body::-webkit-scrollbar {
+
+    width: 0 !important;
+
+}
+
+.Ford body {
+
+	-webkit-font-smoothing: subpixel-antialiased;
+
+}
+
+.Ford.Portrait body {
+
+	top: -33px;
+	bottom: -33px;
+
+	-webkit-transform: scaleY(0.95);
+
+}
+
+.Ford.Landscape body {
+
+	left: -36px;
+	right: -36px;
+
+	-webkit-transform: scaleX(0.95);
+
+}
+
+.Viewport {
+
+	position: absolute;
+
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+
+	overflow: hidden;
+
+}
+
+.Veil {
+
+	position: absolute;
+
+	left: -10px;
+	right: -10px;
+	top: -10px;
+	bottom: -10px;
+
+	background-color: #000000;
+
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 0.5s;
+
+	opacity: 1;
+
+	z-index: 9999;
+
+}
+
+.Veil.Off {
+
+	opacity: 0;
+
+	pointer-events: none;
+
+}
+
+.Hidden {
+
+	display: none;
+
+}

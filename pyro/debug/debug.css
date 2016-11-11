@@ -1,0 +1,797 @@
+.Debug_Darkness {
+
+	position: absolute;
+	
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	
+	background-color: rgba(0,0,0,0.75);
+	
+	opacity: 0;
+	
+	pointer-events: none;
+	
+	overflow: hidden;
+	
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-backface-visibility: hidden;
+	
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: 0.15s;
+	-webkit-transition-timing-function: linear;
+	
+}
+
+.Debug_Darkness.Dragging {
+
+	-webkit-transition-duration: 0s;
+	
+	left: -1px;
+	right: -1px;
+	
+	opacity: 0.0001;
+	
+}
+
+.Debug_Darkness.On {
+	
+	left: -1px;
+	right: -1px;
+
+	opacity: 1;
+	
+	pointer-events: auto;
+	
+}
+
+.Debug_ConsoleButton {
+
+	position: absolute;
+	
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	
+	width: 10px;
+	
+}
+
+.Debug_RefreshButton {
+
+	position: absolute;
+	
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	
+	width: 10px;
+	
+}
+
+.Debug_Console {
+
+	position: absolute;
+	
+	width: 400px;
+	
+	right: -400px;
+	top: 0px;
+	bottom: 0px;
+	
+	background-color: rgba(0,0,0,0.75);
+	
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-backface-visibility: hidden;
+	
+	-webkit-transition-property: opacity, -webkit-transform;
+	-webkit-transition-duration: 0.25s;
+	-webkit-transition-timing-function: linear, ease-out;
+	
+	opacity: 0;
+	
+	overflow: hidden;
+	
+}
+
+.Debug_Console::before {
+
+	content: "";
+	
+	position: absolute;
+	
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	
+	width: 1px;
+	
+	background-color: #000000;
+	
+}
+
+.Debug_Console::after {
+
+	content: "";
+	
+	position: absolute;
+	
+	left: 1px;
+	top: 0px;
+	bottom: 0px;
+	
+	width: 1px;
+	
+	background-color: rgba(255,255,255,0.1);
+	
+}
+
+.Debug_Console.Dragging {
+
+	-webkit-transition-duration: 0s;
+	
+}
+
+.Debug_Console.Open {
+
+	-webkit-transform: translate3d(-400px,0,0);
+	
+	opacity: 1;
+	
+}
+
+.Debug_ConsoleContainer {
+
+	position: absolute;
+	
+	left: 2px;
+	right: 0px;
+	top: 49px;
+	bottom: 80px;
+	
+	box-sizing: border-box;
+		
+	overflow: hidden;
+	overflow-y: auto;
+	
+	-webkit-overflow-scrolling: touch;
+	
+	border-top: 1px solid rgba(0,0,0,1);
+	
+	-webkit-mask-image: -webkit-linear-gradient(bottom, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 20px);
+	
+}
+
+.Gen5 .Debug_ConsoleContainer {
+	
+	-webkit-mask-image: none;
+	
+}
+
+.Debug_ConsoleContainer::before {
+	
+	content: "";
+	
+	position: absolute;
+	
+	left: 0px;
+	right: 0px;
+	top: 1px;
+	
+	height: 1px;
+	
+	background-color: rgba(255,255,255,0.1);
+	
+}
+
+.Debug_ConsoleContent {
+
+	position: relative;
+	
+	margin: 12px;
+	
+	color: #FFFFFF;
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+	
+	font-size: 14px;
+	line-height: 22px;
+	
+	text-align: left;
+	white-space: pre-wrap;
+	word-break: break-word;
+	
+}
+
+.Debug_Col_1 {
+	
+	position: absolute;
+	
+	left: 0px;
+	
+}
+
+.Debug_Col_2 {
+	
+	position: absolute;
+	
+	left: 175px;
+	
+}
+
+.Debug_ConsoleHeader {
+
+	position: absolute;
+	
+	left: 0px;
+	right: 0px;
+	top: 0px;
+
+	height: 50px;
+	
+	line-height: 50px;
+	font-size: 20px;
+	text-align: center;
+	color: #FFFFFF;
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+	
+	overflow: visible;
+	
+}
+
+.Debug_CloseConsoleButton {
+
+	position: absolute;
+	
+	right: 0px;
+	top: 0px;
+	
+	width: 50px;
+	height: 50px;
+	
+	-webkit-transform: rotateZ(45deg);
+	
+}
+
+.Debug_CloseConsoleButton::before,
+.Debug_CloseConsoleButton::after {
+	
+	content: "";
+	
+	position: absolute;
+	
+	background-color: #FFFFFF;
+	
+}
+
+.Debug_CloseConsoleButton::before {
+	
+	width: 2px;
+	
+	top: 10px;
+	bottom: 10px;
+	
+	left: 50%;
+	margin-left: -1px;
+	
+}
+
+.Debug_CloseConsoleButton::after {
+	
+	height: 2px;
+	
+	left: 10px;
+	right: 10px;
+	
+	top: 50%;
+	margin-top: -1px;
+	
+}
+
+.Debug_CloseConsoleButton:active {
+	
+	opacity: 0.5;
+	
+}
+
+.Debug_FPSGraph {
+	
+	position: absolute;
+	
+	left: 2px;
+	right: 0px;
+	bottom: 0px;
+	
+	height: 70px;
+	
+	overflow: hidden;
+	
+}
+
+.Debug_Cursor {
+	
+	position: absolute;
+	
+	right: 0px;
+	bottom: 0px;
+	
+	width: 2px;
+	
+	box-shadow: 0px 1px 3px #000000;
+	
+}
+
+.Debug_Line {
+	
+	position: absolute;
+	
+	left: 2px;
+	right: 0px;
+	
+	height: 20px;
+	
+	font-size: 14px;
+	line-height: 20px;
+	text-shadow: 0px 1px 1px rgba(0,0,0,0.5);
+	color: rgba(255,255,255,0.5);
+	text-align: left;
+	text-indent: 10px;
+	
+	overflow: visible;
+	
+}
+
+.Debug_Line::after {
+	
+	content: "";
+	
+	position: absolute;
+	
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	
+	box-sizing: border-box;
+	
+	border-bottom: 1px dashed rgba(255,255,255,0.25);
+	box-shadow: 0px 1px 3px rgba(0,0,0,0.5);
+	
+}
+
+#Debug_Line_60 {
+	
+	bottom: 60px;
+	
+}
+
+#Debug_Line_30 {
+	
+	bottom: 30px;
+	
+}
+
+#Debug_Line_0 {
+	
+	bottom: 0px;
+	
+}
+
+.Debug_FPSCanvas {
+	
+	position: absolute;
+	
+	height: 100%;
+	
+	left: -2px;
+	right: 0px;
+	bottom: 1px;
+	
+}
+
+.Debug_FPS {
+	
+	position: absolute;
+	
+	right: 10px;
+	bottom: 60px;
+	width: 200px;
+	
+	height: 20px;
+	
+	font-size: 14px;
+	line-height: 20px;
+	
+	color: #FFFFFF;
+	text-shadow: 0px 1px 3px rgba(0,0,0,1);
+	text-align: right;
+	
+}
+
+.Debug_Refresh {
+
+	position: absolute;
+	
+	left: 50%;
+	margin-left: -30px;
+	top: 50%;
+	margin-top: -30px;
+	
+	width: 60px;
+	height: 60px;
+	
+	border-radius: 50%;
+	
+	-webkit-transform: scale3d(1,1,1);
+	-webkit-backface-visibility: hidden;
+	
+	-webkit-transition-property: opacity, -webkit-transform;
+	-webkit-transition-duration: 0.15s;
+	-webkit-transition-timing-function: linear, ease-in;
+	
+	opacity: 0;
+	
+	pointer-events: none;
+	
+	overflow: hidden;
+	
+}
+
+.Debug_Refresh::after {
+	content: "";
+	
+	position: absolute;
+	
+	left: 0px;
+	top: 0px;
+	
+	width: 100%;
+	height: 50%;
+	
+	border-top-left-radius: 30px;
+	border-top-right-radius: 30px;
+	
+	box-shadow: inset -3px 3px 0px #FFAA00, inset 0px 3px 0px #FFAA00;
+	
+	-webkit-transform: translate3d(0,0,0);
+	-webkit-backface-visibility: hidden;
+	
+	-webkit-transform-origin-x: 50%;
+	-webkit-transform-origin-y: 100%;
+	
+	-webkit-animation-name: Debug_Spin;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-play-state: paused;
+}
+
+.Debug_Refresh.Dragging {
+
+	-webkit-transition-duration: 0s;
+	
+}
+
+.Debug_Refresh.On {
+
+	opacity: 1;
+	
+}
+
+.Gen5 .Debug_Refresh.On {
+	
+	-webkit-animation-name: Debug_Spin;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	
+}
+
+.Debug_Refresh.On::after {
+	
+	-webkit-animation-play-state: running;
+	
+}
+
+.Debug_GuidesButton {
+	
+	position: absolute;
+	
+	left: 12px;
+	top: 15px;
+	
+	width: 21px;
+	height: 21px;
+	
+	box-sizing: border-box;
+	
+	border: 1px solid #555555;
+	
+}
+
+.Debug_GuidesButton::before,
+.Debug_GuidesButton::after {
+	
+	content: "";
+	
+	position: absolute;
+	
+	background-color: #555555;
+	
+}
+
+.Debug_GuidesButton::before {
+	
+	left: 9px;
+	top: 0px;
+	bottom: 0px;
+	
+	width: 1px;
+	
+}
+
+.Debug_GuidesButton::after {
+	
+	left: 0px;
+	right: 0px;
+	top: 9px;
+	
+	height: 1px;
+	
+}
+
+.Debug_GuidesButton.On {
+	
+	border: 1px solid #FFFFFF;
+	
+}
+
+.Debug_GuidesButton.On.LT,
+.Debug_GuidesButton.On.LC,
+.Debug_GuidesButton.On.LB {
+	
+	border-left: 1px solid #FF00FF;
+	
+}
+
+.Debug_GuidesButton.On.LT,
+.Debug_GuidesButton.On.CT,
+.Debug_GuidesButton.On.RT {
+	
+	border-top: 1px solid #FF00FF;
+	
+}
+
+.Debug_GuidesButton.On.RT,
+.Debug_GuidesButton.On.RC,
+.Debug_GuidesButton.On.RB {
+	
+	border-right: 1px solid #FF00FF;
+	
+}
+
+.Debug_GuidesButton.On.LB,
+.Debug_GuidesButton.On.CB,
+.Debug_GuidesButton.On.RB {
+	
+	border-bottom: 1px solid #FF00FF;
+	
+}
+
+.Debug_GuidesButton.On::before,
+.Debug_GuidesButton.On::after {
+	
+	background-color: #FFFFFF;
+	
+}
+
+.Debug_GuidesButton.On.CT::before,
+.Debug_GuidesButton.On.CC::before,
+.Debug_GuidesButton.On.CB::before {
+	
+	background-color: #FF00FF;
+	
+	z-index: 1;
+	
+}
+
+.Debug_GuidesButton.On.LC::after,
+.Debug_GuidesButton.On.CC::after,
+.Debug_GuidesButton.On.RC::after {
+	
+	background-color: #FF00FF;
+	
+	z-index: 1;
+	
+}
+
+.Debug_Guides {
+	
+	position: absolute;
+	
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+	
+	pointer-events: none;
+	
+	overflow: hidden;
+	
+	display: none;
+	
+}
+
+.Debug_Guides {
+	
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAACdklEQVR4nO3bsW0DMRBFQZ6hwlSKS7tS3BmVWJn3RQfIOMwU8MHkgdEea+9zAYMrA9n7ufZ+2rN3k73z67IxuCGBQBAIBIFAEAgEgUAQCASBQBAIBIFAEAgEgUAQCASBQBAIBIFAEAiE4/ei8PzwO+A/+vaDQHistdY6jp9L1t73wPbs3WPPDwJFIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCwU06zFwUQnGTbs/evOcHgSIQCAKBIBAIAoEgEAgCgSAQCAKBIBAIAoEgEAgCgSAQCAKBIBAIAoHgJh1mLgqhuEm3Z2/e84NAEQgEgUAQCASBQBAIBIFAEAgEgUAQCASBQBAIBIFAEAgEgUAQCASBQHCTDjMXhVDcpNuzN+/5QaAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAguEmHmYtCKG7S7dmb9/wgUAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBDcpMPMRSEUN+n27M17fhAoAoEgEAgCgSAQCAKBIBAIAoEgEAgCgSAQCAKBIBAIAoEgEAgCgSAQCG7SYeaiEIqbdHv25j0/CBSBQBAIBIFAEAgEgUAQCASBQBAIBIFAEAgEgUAQCASBQBAIBIFAEAgEN+kwc1EIxU26PXvznh8EikAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIJAIAgEgkAgCASCQCAIBIKbdJi5KITiJt2evXnPDwJFIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQCQSAQBAJBIBAEAkEgEAQC4X2TDvzhBez7ZCdnFtTvAAAAAElFTkSuQmCC');
+	background-position: center center;
+	background-size: 100px 100px;
+	background-repeat: repeat;
+	
+	image-rendering: -webkit-optimize-contrast;
+	
+}
+
+.Debug_Guides.LT {
+	
+	background-position: left top;
+	
+}
+
+.Debug_Guides.CT {
+	
+	background-position: center top;
+	
+	left: -100px;
+	
+}
+
+.Debug_Guides.RT {
+	
+	background-position: right top;
+	
+}
+
+.Debug_Guides.LC {
+	
+	background-position: left center;
+	
+	top: -100px;
+	
+}
+
+.Debug_Guides.CC {
+	
+	background-position: center center;
+	
+	left: -100px;
+	top: -100px;
+	
+}
+
+.Debug_Guides.RC {
+	
+	background-position: right center;
+	
+	top: -100px;
+	
+}
+
+.Debug_Guides.LB {
+	
+	background-position: left bottom;
+	
+}
+
+.Debug_Guides.CB {
+	
+	background-position: center bottom;
+	
+	left: -100px;
+	
+}
+
+.Debug_Guides.RB {
+	
+	background-position: right bottom;
+	
+}
+
+.Debug_Guides.On {
+	
+	display: block;
+	
+}
+
+.Debug_Guides::before,
+.Debug_Guides::after {
+	
+	content: "";
+	
+	position: absolute;
+	
+	background-color: #FF00FF;
+	
+}
+
+.Debug_Guides::before {
+	
+	top: 0px;
+	bottom: 0px;
+	
+	width: 1px;
+	
+}
+
+.Debug_Guides::after {
+	
+	left: 0px;
+	right: 0px;
+	
+	height: 1px;
+	
+}
+
+.Debug_Guides.LT::before,
+.Debug_Guides.LC::before,
+.Debug_Guides.LB::before {
+	
+	left: 0px;
+	
+}
+
+.Debug_Guides.CT::before,
+.Debug_Guides.CC::before,
+.Debug_Guides.CB::before {
+	
+	left: 50%;
+	margin-left: 50px;
+	
+}
+
+.Debug_Guides.RT::before,
+.Debug_Guides.RC::before,
+.Debug_Guides.RB::before {
+	
+	right: 0px;
+	
+}
+
+.Debug_Guides.LT::after,
+.Debug_Guides.CT::after,
+.Debug_Guides.RT::after {
+	
+	top: 0px;
+	
+}
+
+.Debug_Guides.LC::after,
+.Debug_Guides.CC::after,
+.Debug_Guides.RC::after {
+	
+	top: 50%;
+	margin-top: 50px;
+	
+}
+
+.Debug_Guides.LB::after,
+.Debug_Guides.CB::after,
+.Debug_Guides.RB::after {
+	
+	bottom: 0px;
+	
+}
+
+@-webkit-keyframes Debug_Spin {
+	
+	from {
+		
+		-webkit-transform: rotateZ(0deg);
+	
+	} to {
+		
+		-webkit-transform: rotateZ(360deg);
+		
+	}
+	
+}

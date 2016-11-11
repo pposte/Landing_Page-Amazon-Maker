@@ -1,0 +1,2 @@
+## Empty cache manifest file, ensures this build is not pre-cached on device.
+## Please replace with actual manifest file after QA is complete by running packaged build through precache tool!
